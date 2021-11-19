@@ -123,8 +123,8 @@ def drawPlots():
     dyPlusName = dy + muPlus;
     dyMinusName = dy + muMinus;
     
-    hdata = Higgs2mumu_Run2012_diMuonMass;
-    hmc = DYJets_diMuonMass;
+    hdata = f1.Get("Higgs2mumu_Run2012_diMuonMass");
+    hmc = f1.Get("DYJets_diMuonMass");
     print("nevents = (Higgs2mumu): ", hdata.Integral(), ";; (DY2mumu): ", hmc.Integral())
 
     #HiggsDimuonMass = "Higgs2mumu_Run2012_diMuonMass";
@@ -155,3 +155,5 @@ def drawPlots():
       DrawHist(hdata_minus, hmc_minus, higgsHistNameMinus, dyHistNameMinus, muMinus, mode[i]);
 
     f1.Close();
+
+drawPlots()
