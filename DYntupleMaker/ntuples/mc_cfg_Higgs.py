@@ -81,8 +81,8 @@ process.noscraping = cms.EDFilter("FilterOutScraping",
 
 process.FastFilters = cms.Sequence( process.goodOfflinePrimaryVertices + process.noscraping )
 
-from Phys.DYntupleMaker.DYntupleMaker_cfi import *
-from Phys.DYntupleMaker.DYntupleMaker_cfi import *
+from H2mumuClassification.DYntupleMaker.DYntupleMaker_cfi import *
+from H2mumuClassification.DYntupleMaker.DYntupleMaker_cfi import *
 
 process.recoTree = DYntupleMaker.clone()
 process.recoTree.isMC = isMC
